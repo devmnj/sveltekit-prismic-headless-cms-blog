@@ -1,6 +1,6 @@
 <div class="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
     <a
-        href="/reddit.com"
+        href="https://www.reddit.com/user/wildcat_sera"
         class="mx-2 text-gray-600 transition-colors duration-200 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
         aria-label="Reddit"
     >
@@ -8,7 +8,7 @@
 
     </a>
     <a
-    href="http://dibble.com"
+    href="http://dribble.com"
     class="mx-2 text-gray-600 transition-colors duration-200 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
     aria-label="dribble"
 >

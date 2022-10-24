@@ -15,10 +15,10 @@
 			<MobileMenuIcon />
 		</div>
 		<Menu>
-			<MenuItem caption="Home" />
-			<MenuItem caption="JS Blog" />
-			<MenuItem caption="Gallery" />
-			<MenuItem caption="Unsplash" />
+			<MenuItem caption="Home"  />
+			<MenuItem path="https://javascriptsu.wordpress.com/" caption="JS Blog" />
+			<MenuItem path="https://www.flickr.com/photos/flowersandmacros/albums/72157711552332141" caption="Gallery" />
+			<MenuItem path="https://unsplash.com/@manojap" caption="Unsplash" />
 		</Menu>
 	</div>
 	<!-- Social Icons -->
