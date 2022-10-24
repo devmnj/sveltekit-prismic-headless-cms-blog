@@ -18,6 +18,4 @@
  
  
 <Prism language="javascript" code="{html}" header="Source code"/>
- <style>
-	
- </style>
+  
