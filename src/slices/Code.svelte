@@ -10,9 +10,9 @@
 </script>
 <svelte:head>
 	 
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-dark.min.css" rel="stylesheet" />
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-dark.min.css" rel="stylesheet" /> -->
  <!-- <link href="@\prism-themes\themes\prism-atom-dark.css" rel="stylesheet"> -->
- <!-- <link href="..\..\node_modules\prism-themes\themes\prism-duotone-forest.min.css" rel="stylesheet"> -->
+ <link href="..\..\node_modules\prism-themes\themes\prism-one-dark.min.css" rel="stylesheet">
  
   </svelte:head>
  
