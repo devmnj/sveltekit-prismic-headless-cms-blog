@@ -9,8 +9,8 @@
 	const html= prismicH.asText( slice?.primary.cod_text_field);
 </script>
 <svelte:head>
-	 
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-dark.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-atom-dark.min.css" integrity="sha512-GZPS1oCebjx8g/ZkrTTvWirW+4wDkzIsilUQPXcZzuDpDzoH5brM2AojiFjo6ObIWeM68ZDostvdjaS9MNYCTg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-dark.min.css" rel="stylesheet" /> -->
  <!-- <link href="@\prism-themes\themes\prism-atom-dark.css" rel="stylesheet"> -->
  <!-- <link href="..\..\node_modules\prism-themes\themes\prism-one-dark.min.css" rel="stylesheet"> -->
  
