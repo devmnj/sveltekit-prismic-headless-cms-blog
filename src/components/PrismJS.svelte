@@ -5,7 +5,7 @@
 <script>
 
   import { onMount } from 'svelte';
-  import Prism from "prismjs";
+//   import Prism from "prismjs";
   
   /**
 	 * @type {any}
