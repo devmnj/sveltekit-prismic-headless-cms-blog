@@ -6,9 +6,18 @@
 
   import { onMount } from 'svelte';
   
-  export let language;
-  export let code;
-  export let header;
+  /**
+	 * @type {any}
+	 */
+   export let language;
+  /**
+	 * @type {any}
+	 */
+   export let code;
+  /**
+	 * @type {any}
+	 */
+   export let header;
   
   onMount(() => {
 
@@ -35,37 +44,40 @@
        case "python":
          lang_module = "https://prismjs.com/components/prism-python.js"
          langJS = true;
-         break                
+         break;
 
        case "rust":
          lang_module = "https://prismjs.com/components/prism-rust.js"
          langJS = true;
-         break   
+         break;
 
        case "r":
          lang_module = "https://prismjs.com/components/prism-r.js"
          langJS = true;
-         break   
+         break;
 
        case "sql":
          lang_module = "https://prismjs.com/components/prism-sql.js"
          langJS = true;
-         break           
+         break;
      }
 
      if (langJS == true) {
 
         lang_script = document.createElement('script');
+        // @ts-ignore
         lang_script.src = lang_module
         lang_script.async = true
         document.head.append(lang_script);
 
         lang_script.onload = () => {
+          // @ts-ignore
           Prism.highlightAll();
          }
 
      }
      else {
+       // @ts-ignore
        Prism.highlightAll();
      }
 
@@ -94,12 +106,7 @@
  Shared styles
  */
 
-section h1,
-#features li strong,
-header h2,
-footer p {
-	font: 100% Rockwell, Arvo, serif;
-}
+ 
 
 /*
  Styles
@@ -119,18 +126,7 @@ body {
 a {
 	color: inherit;
 }
-
-section h1 {
-	font-size: 250%;
-}
-
-	section section h1 {
-		font-size: 150%;
-	}
-
-	section h1 code {
-		font-style: normal;
-	}
+ 
 
 	section h1 > a,
 	section h2[id] > a {
