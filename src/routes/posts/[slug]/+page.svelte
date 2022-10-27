@@ -73,14 +73,14 @@ const components = {
                     </p>
                 </div>
             </div>
-            <!-- <div class="place-content-center flex"> -->
-                <img class="rounded place-content-center flex"
+            <div class="place-content-center flex"> 
+                <img class="rounded   w-250 h-250"
                     src={prismicH.asImageSrc(doc.featured_img_link)}
                     srcset={prismicH.asImageWidthSrcSet(doc.featured_img_link).srcset}
                     alt={doc.featured_img_link.alt}
                     />
 
-            <!-- </div> -->
+            </div>
             <div class="dark:text-gray-100" id="article">
 
                 <SliceZone slices={doc.body} {components} />
