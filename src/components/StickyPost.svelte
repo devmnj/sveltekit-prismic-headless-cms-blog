@@ -25,14 +25,14 @@ export let slug= " ";
  <a
  rel="noopener noreferrer"
  href={`/posts/${slug || '404'}`}
- class="bg-slate-700 block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900"
+ class="bg-gray-900 block max-w-sm  mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-800"
 >
  <img
    src={prismicH.asImageSrc(image)}
    alt=""
    class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500"
  />
- <div class="rounded-md p-6 space-y-2 lg:col-span-5 bg-slate-700">
+ <div class="bg-gray-900 rounded-md p-6 space-y-2 lg:col-span-5">
    <h3 class="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
      { prismicH.asText(title) || "Noster tincidunt reprimique ad pro"}
    </h3>
