@@ -11,7 +11,7 @@
 	<div class="lg:flex lg:items-center">
 		<div class="flex items-center justify-between">
 			<Logo>DEVMNJ</Logo>
-			<!-- Mobile menu button -->
+			<!-- Mobile menu button-->
 			<MobileMenuIcon />
 		</div>
 		<Menu>

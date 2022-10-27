@@ -1,40 +1,39 @@
 <script>
-/**
- * @type {any}
- */
+// @ts-nocheck
 
-export let slug=" ";
-export let thumb = "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bm8lMjBpbWFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60";
-export let category = " "
-export let title = " ";
-export let summary = " ";
-export let pubDate =" "
+import * as prismicH from "@prismicio/helpers";
+/**
+ 
+/**
+	 * @type {{ Node: { title: any; }; }}
+	 */
+ export let post;
 </script>
 
  
     <a
-        href={`/posts/${slug}`}
+        href={`/posts/${post?.node._meta.uid}`}
         rel="noopener noreferrer"
         class="rounded bg-gray-600"
         >
         <!-- svelte-ignore a11y-missing-attribute -->
         
-        <img
-            role="presentation"
-            class=""
-            src={ thumb}
-            />
-          
+        
+            <img   role="presentation"
+            src={prismicH.asImageSrc(post?.node?.featured_img_link)}
+            srcset={prismicH.asImageWidthSrcSet(post?.node?.featured_img_link)?.srcset} 
+            alt={post?.node?.featured_img_link.alt} 
+          />
         <div class="flex justify-between ">
-            <span class="mt-3 mx-3 text-yellow-200">{pubDate || " June 4, 2020"}</span>
-            <span class="mt-3 mx-3 text-yellow-200"> {category || 'Reactjs'}</span>
+            <span class="mt-3 mx-3 text-yellow-200">{prismicH.asDate(post?.node?._meta?.firstPublicationDate).toDateString()}</span>
+            <span class="mt-3 mx-3 text-yellow-200"> { 'Svelte'}</span>
         </div>
 
         <div class="px-2 py-2 space-y-2 ">
             <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">
-                {title || "In usu laoreet repudiare legendos"}
+                {prismicH.asText(post?.node?.title)}
             </h3>
-            <p class="align-baseline">{summary.trim()}</p>
+            <p class="align-baseline">{@html prismicH.asHTML(post?.node?.post_excerpt)}</p>
         </div>
  
     </a>

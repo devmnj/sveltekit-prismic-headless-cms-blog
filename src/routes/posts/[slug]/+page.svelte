@@ -41,7 +41,10 @@ const components = {
 
 
 </script>
-
+<svelte:head>
+    <title>{prismicH.asText( doc?.title)}</title>   
+    <meta name="description" content={prismicH.asText( doc?.post_excerpt)} /> 
+</svelte:head>
 <div  >
     <!-- {JSON.stringify(document.body)} -->
 

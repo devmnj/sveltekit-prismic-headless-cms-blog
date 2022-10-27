@@ -12,16 +12,19 @@ const sticky = data?.sticky;
 
 </script>
 
+<svelte:head>
+    <title>A blog on Web technologies </title>
+    <meta name="description" content="Ablog on Web Frame works"/>    
+</svelte:head>
 <MainContainer>
     <!-- Sticky Post -->
-    <!-- {JSON.stringify(sticky)} -->
     <StickyPost
         pubDate ={sticky[0].node._meta.firstPublicationDate}
         slug={sticky[0].node._meta.uid}
         image={sticky[0].node.featured_img_link}
         title={sticky[0].node.title}
         summary={sticky[0].node.post_excerpt}
-        />
+    />
         <!-- Post Grid   -->
         <div class="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {' '}
@@ -29,12 +32,9 @@ const sticky = data?.sticky;
             {#each data?.documents as document}
             <!-- {JSON.stringify(document.node)} -->
             <PostCard
-                thumb={document.node.featured_img_link.url}
-                title={document.node.title[0].text}
-                pubDate={ prismicH.asDate(document.node._meta.firstPublicationDate)?.toDateString()}
-                slug={document.node._meta.uid}
+                 post={document}
                 />
-                {/each}
-                {' '}
-                </div>
-                </MainContainer>
+            {/each}
+            {' '}
+        </div>
+</MainContainer>
