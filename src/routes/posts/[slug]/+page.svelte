@@ -58,29 +58,29 @@ const components = {
                     <!-- <summary>{document.post_excerpt[0].text}</summary> -->
                 </div>
                 <div class="flex flex-col items-start justify-between w-full md:flex-row md:items-center dark:text-gray-400">
-                    <div class="flex items-center md:space-x-2">
+                    <!-- <div class="flex items-center md:space-x-2"> -->
                         <img
                             src="https://source.unsplash.com/random/?face&fit=facearea&facepad=2&w=256&h=256&q=80"
                             alt=""
-                            class="w-12 h-12 border rounded-md dark:bg-gray-500 dark:border-gray-700"
+                            class="flex items-center md:space-x-2 w-12 h-12 border rounded-md dark:bg-gray-500 dark:border-gray-700"
                             />
                         <p class="text-sm">
                             {  "Devmnj"} •  {prismicH.asDate(doc._meta.lastPublicationDate).toDateString()}
                         </p>
-                    </div>
+                    <!-- </div> -->
                     <p class="flex-shrink-0 mt-3 text-sm md:mt-0">
                      {rtime} min read • 1,570 views
                     </p>
                 </div>
             </div>
-            <div class="place-content-center flex">
-                <img class="rounded"
+            <!-- <div class="place-content-center flex"> -->
+                <img class="rounded place-content-center flex"
                     src={prismicH.asImageSrc(doc.featured_img_link)}
                     srcset={prismicH.asImageWidthSrcSet(doc.featured_img_link).srcset}
                     alt={doc.featured_img_link.alt}
                     />
 
-            </div>
+            <!-- </div> -->
             <div class="dark:text-gray-100" id="article">
 
                 <SliceZone slices={doc.body} {components} />
