@@ -15,6 +15,7 @@ const sticky = data?.sticky;
 <svelte:head>
     <title>A blog on Web technologies </title>
     <meta name="description" content="Ablog on Web Frame works"/>    
+    <meta name="yandex-verification" content="fcfe7437dbe09115" />
 </svelte:head>
 <MainContainer>
     <!-- Sticky Post -->

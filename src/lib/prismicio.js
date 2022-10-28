@@ -4,7 +4,7 @@ import {GraphQLClient} from "graphql-request";
 export const repositoryName = 'jsuu'
 
 export const STICKY_POST=`query  {
-    allPost_types(first:1,sortBy: meta_lastPublicationDate_ASC, where: {sticky_post: true}) {
+    allPost_types(first:1,sortBy: meta_lastPublicationDate_DESC, where: {sticky_post: true}) {
       totalCount
       edges {
         node {
@@ -25,7 +25,7 @@ export const STICKY_POST=`query  {
   }`;
 
 export const ALL_POSTS = `query {
-allPost_types(where: {sticky_post: false}) {
+allPost_types(sortBy: meta_lastPublicationDate_DESC,where: {sticky_post: false}) {
 edges {
 node {
 _meta {

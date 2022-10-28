@@ -59,18 +59,19 @@ const components = {
                     <!-- <summary>{document.post_excerpt[0].text}</summary> -->
                 </div>
                 <div class="flex flex-col items-start justify-between w-full md:flex-row md:items-center dark:text-gray-400">
-                    <!-- <div class="flex items-center md:space-x-2"> -->
+                    <div class="flex items-center md:space-x-2">
                         <img
-                            src="https://source.unsplash.com/random/?face&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            src="https://avatars.githubusercontent.com/u/28762625?v=4/?face&fit=facearea&facepad=2&w=256&h=256&q=80"
                             alt=""
-                            class="flex items-center md:space-x-2 w-12 h-12 border rounded-md dark:bg-gray-500 dark:border-gray-700"
+                            class="f w-12 h-12 border rounded-md dark:bg-gray-500 dark:border-gray-700"
                             />
+
                         <p class="text-sm">
-                            {  "Devmnj"} •  {prismicH.asDate(doc._meta.lastPublicationDate).toDateString()}
+                            Devmnj  •  {prismicH.asDate(doc._meta.lastPublicationDate)}
                         </p>
-                    <!-- </div> -->
+                    330834</div>
                     <p class="flex-shrink-0 mt-3 text-sm md:mt-0">
-                     {rtime} min read • 1,570 views
+                     {rtime} min read  
                     </p>
                 </div>
             </div>
