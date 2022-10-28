@@ -44,6 +44,7 @@ const components = {
 <svelte:head>
     <title>{prismicH.asText( doc?.title)}</title>   
     <meta name="description" content={prismicH.asText( doc?.post_excerpt)} /> 
+    <meta name="yandex-verification" content="fcfe7437dbe09115" />
 </svelte:head>
 <div  >
     <!-- {JSON.stringify(document.body)} -->
