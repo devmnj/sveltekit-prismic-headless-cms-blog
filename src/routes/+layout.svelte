@@ -9,6 +9,7 @@
     <title>A blog on Web technologies </title>
     <meta name="keywords" content="css,javascript,typesvript,html,tailwinccss,react,svelte,vue,golang,next,nuxt"/>
 	<meta name="refresh" content="60"/>
+	<meta name="yandex-verification" content="fcfe7437dbe09115" />
 </svelte:head>
 <div class="bg-gray-100">
  <Banner/>
