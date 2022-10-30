@@ -10,7 +10,7 @@ import * as prismicH from "@prismicio/helpers";
  export let post;
 </script>
 
- 
+   
     <a
         href={`/posts/${post?.node._meta.uid}`}
         rel="noopener noreferrer"

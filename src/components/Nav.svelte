@@ -5,6 +5,8 @@
 	import Menu from 'components/Menu.svelte';
 	import NavContainer from './NavContainer.svelte';
 	import MenuItem from './MenuItem.svelte';
+	// @ts-ignore
+	import Search2 from '$lib/Search2.svelte';
 </script>
 
 <NavContainer>
@@ -20,6 +22,8 @@
 			<MenuItem path="https://www.flickr.com/photos/flowersandmacros/albums/72157711552332141" caption="Gallery" />
 			<MenuItem path="https://unsplash.com/@manojap" caption="Unsplash" />
 		</Menu>
+		<Search2/>
+
 	</div>
 	<!-- Social Icons -->
 	<SocialIcons />
