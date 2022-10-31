@@ -12,6 +12,7 @@ import Banner from 'components/Banner.svelte';
 	<meta name="refresh" content="60"/>
 	<meta name="yandex-verification" content="fcfe7437dbe09115" />
 </svelte:head>
+
 <Analytics/>
 <div class="bg-gray-100">
  <Banner/>
