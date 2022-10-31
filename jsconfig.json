@@ -1,5 +1,6 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
+	"types": [ "@types/gtag.js"], 
 	"compilerOptions": {
 		"allowJs": true,
 		"checkJs": true,

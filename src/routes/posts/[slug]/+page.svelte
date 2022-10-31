@@ -12,6 +12,7 @@ import Code from "$lib/slices/Code.svelte";
 	import { search } from "$lib/store";
 	import { goto } from "$app/navigation";
 	import PostSkelton from "components/PostSkelton.svelte";
+	import RpCard from "components/RPCard.svelte";
 /** @type {import('./$types').PageData} */
 export let data;
 const doc = data.document.post_type
@@ -93,7 +94,7 @@ $:{
         </div>
         <div class="dark:text-gray-100" id="article">
 
-            <SliceZone slices={doc.body} {components} />
+            <SliceZone slices={doc.body} {components} defaultComponent={()=> {`No slice found !`}} />
 
         </div>
     </article>
@@ -101,15 +102,24 @@ $:{
         <div class="flex flex-wrap py-6 space-x-2 border-t border-dashed dark:border-gray-400">
             <!-- <Tag name={props.post.tag} /> -->
         </div>
-        <div class="space-y-2 text-white">
+        <!-- <div class="space-y-2 text-white">
             <h4 class="text-lg  font-semibold">Comments</h4>
 
-            <!-- <PostComment comment={props.post.userComments[0].body} /> -->
-        </div>
-        <div class="space-y-2 mt-3 text-white">
-            <h4 class="text-lg  font-semibold">Related posts</h4>
+        </div> -->
+        {#if doc.recommended}
+        <!-- {JSON.stringify(doc?.recommended)} -->
+            <div class="space-y-2 mt-3 text-white">
+            <h4 class="text-lg  font-semibold">Recommended for Reading</h4>
             <!-- <RelatedPosts tag={props.post.tag} /> -->
+            <div class="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-3 mt-4 w-full">
+            {#each doc?.recommended as recommended }
+                <!-- {JSON.stringify(recommended)} -->
+                <RpCard slug={recommended?.post?._meta?.uid} title={recommended?.post?.title} cover={recommended?.post?.featured_img_link.url} summary={recommended?.post?.post_excerpt}/>
+            {/each}
+            </div>
         </div>
+        {/if}
+        
     </div>
 
  {:else}

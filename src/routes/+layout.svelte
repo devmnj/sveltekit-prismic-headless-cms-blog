@@ -1,5 +1,6 @@
 <script>
-	import Banner from 'components/Banner.svelte';
+	import Analytics from '$lib/analytics.svelte';
+import Banner from 'components/Banner.svelte';
 	import Footer from 'components/Footer.svelte';
  
 	import Nav from 'components/Nav.svelte';
@@ -11,6 +12,7 @@
 	<meta name="refresh" content="60"/>
 	<meta name="yandex-verification" content="fcfe7437dbe09115" />
 </svelte:head>
+<Analytics/>
 <div class="bg-gray-100">
  <Banner/>
 	<Nav />

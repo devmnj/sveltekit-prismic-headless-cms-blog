@@ -8,5 +8,12 @@
 	const html= prismicH.asHTML(slice?.primary.paragraph_rich_text_field);
  
 </script>
-<div class="mb-1 text-lg">{@html html}</div>
+<div class=" mb-1 text-lg">
+<style>
+	a:hover {
+		color: orange;
+	}
+</style>	
+	{@html html}
+</div>
 

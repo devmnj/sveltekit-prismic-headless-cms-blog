@@ -10,6 +10,27 @@ export async function load({ params,routeId}) {
           _meta{
             lastPublicationDate
           }
+          recommended{
+            post{
+              ... on _Document{
+                _meta{
+                  uid
+                  firstPublicationDate            
+                }
+                ... on Post_type{
+                  title
+                  post_excerpt
+                  featured_img_link
+                  {
+                    ... on _ExternalLink{
+                      url
+                    }
+                  
+                  }
+                }
+              }
+            }
+          }
         title
         post_excerpt
         featured_img_link {

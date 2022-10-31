@@ -18,6 +18,7 @@
 		"@prismicio/svelte": "^0.0.4",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
+		"@types/gtag.js": "^0.0.12",
 		"autoprefixer": "^10.4.12",
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
