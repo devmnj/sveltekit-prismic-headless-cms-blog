@@ -1,12 +1,13 @@
 <script>
  
-	import Prism from './../components/PrismJS.svelte';
+	import Prism from '../../components/PrismJS.svelte';
 	import * as prismicH from "@prismicio/helpers";
 
     // @ts-ignore
     
 	export let slice = {};
-	const html= prismicH.asText( slice?.primary.cod_text_field);
+	// @ts-ignore
+	const html= prismicH.asText( slice?.primary?.cod_text_field);
 </script>
 <svelte:head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-gruvbox-dark.min.css" integrity="sha512-XZoe1WroNfbcndQJexn+pbMEytiaSYRHDuKjew+Nn0xYSTmB4sfoZnBdqYCrXq2IwAcPZS/sXE5ju/JbppYOsA==" crossorigin="anonymous" referrerpolicy="no-referrer" />

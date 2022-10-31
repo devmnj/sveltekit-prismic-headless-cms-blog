@@ -1,5 +1,5 @@
 <script>
-	import { search } from "../store";
+	import { search } from "$lib/store";
     let kw=""
 
    $:{
@@ -8,7 +8,6 @@
    }
     
 </script>
-
  
   <form method="GET">
     <div class="relative text-white-600 rouded focus-within:text-yellow-100">

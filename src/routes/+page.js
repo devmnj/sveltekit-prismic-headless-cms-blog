@@ -5,7 +5,7 @@ import { error } from '@sveltejs/kit'
 export async function load(){
     const documents=client.request(ALL_POSTS).then(res=>res.allPost_types.edges)
     const sticky= client.request(STICKY_POST).then(res=>res.allPost_types.edges)
-    console.log('loading posts')
+    console.log('loading posts !!')
     
    return{
     documents:(await documents),

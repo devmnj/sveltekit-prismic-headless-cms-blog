@@ -3,7 +3,7 @@ import { error } from '@sveltejs/kit'
  
 /** @type {import('./$types').PageLoad} */
 // @ts-ignore
-export async function load({ params }) {
+export async function load({ params,routeId}) {
 
     const POST_QUERY = `query {
         post_type(uid: "${params.slug}", lang: "en-us") {
@@ -59,15 +59,16 @@ export async function load({ params }) {
         }
         }
       }  `;
-
+ 
+      // console.log('Page1 :'+ JSON.stringify( routeId));
       const document=client.request(POST_QUERY).then(res=>res)
-
+      
      if(await document){
-      return{ document}
+      return{ document,params,routeId}
       }
      error(404, 'Not found');
     return{
-       document
+       document 
     };
 
      
