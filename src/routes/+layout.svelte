@@ -11,8 +11,7 @@ import Banner from 'components/Banner.svelte';
     <meta name="keywords" content="css,javascript,typesvript,html,tailwinccss,react,svelte,vue,golang,next,nuxt"/>
 	<meta name="refresh" content="60"/>
 	<meta name="yandex-verification" content="fcfe7437dbe09115" />
-
-
+	<meta name="google-site-verification" content="J9O2DP11PYXL-C38-CLPu2W6BmzoITomcjLUKyZ0m-8" />
 </svelte:head>
 
 <Analytics/>	
