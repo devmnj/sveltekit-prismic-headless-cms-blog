@@ -1,5 +1,8 @@
 <script>
+	import { goto, invalidateAll } from "$app/navigation";
 	import { asHTML, asText } from "@prismicio/helpers";
+	import { invalid, redirect } from "@sveltejs/kit";
+	import { onMount } from "svelte";
 
 
     /**
@@ -20,24 +23,37 @@
 	 */
      export let cover;
 
+     const handleClick=()=>{
+        console.log('clicked');
+        goto(`/posts/${slug}`);
+        // redirect(201,`/posts/${slug}}`)
+        // @ts-ignore
+        // invalidateAll();
+        
+     }
+     onMount(()=>{
+        invalidateAll();
+     }) 
+
 </script>
  
 <div class="max-w-2xl mx-auto">
     
     <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
-        <a href={`/posts/${slug}`}>
+        <a href={`/posts/${slug}`} rel="noreferrer" target="_blank">
             <img class="rounded-t-lg" src={cover} alt="">
-        </a>
+        
         <div class="p-5">
-            <a href={`/posts/${slug}`}>
+            
                 <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">{asText(title)}</h5>
-            </a>
+             
             <p class="font-normal text-gray-700 mb-3 dark:text-gray-400">{@html asHTML(summary)} </p>
-            <a href={`/posts/${slug}`} class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <btn on:click={()=>handleClick()} class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Read more
                 <svg class="-mr-1 ml-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </a>
-        </div>
+            </btn>
+        </div></a>
     </div>
 
 </div>
