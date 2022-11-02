@@ -25,7 +25,7 @@
 </script>
 
  <a href={`/posts/${slug}`}>
-    <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80" src= {cover} alt="">
+    <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80" src= {cover} alt="media">
 
     <div class="mt-8">
         <span class="text-blue-500 uppercase">Javascript</span>

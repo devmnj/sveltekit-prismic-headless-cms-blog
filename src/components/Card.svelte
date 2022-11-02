@@ -1,7 +1,7 @@
 <div class="lg:flex">
     <img class="object-cover w-full h-56 rounded-lg lg:w-64" src={prismicH.asImageSrc(cover)}
      
-    alt={cover.alt}   >
+    alt="media"   >
 
     <div class="flex flex-col justify-between py-6 lg:mx-6">
         <a href={`/posts/${slug}`} class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
