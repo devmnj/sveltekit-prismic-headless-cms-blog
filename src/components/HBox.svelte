@@ -39,7 +39,7 @@
 		margin-bottom: 4%;
 		font-family: 'Patua One', cursive;
 	}
-	#body .box2 {
+	/* #body .box2 {
 		max-height: 350px;
 		height: 150px;
 		background-color: #63d8b5;
@@ -49,8 +49,8 @@
 		display: flex;
 		align-content: center;
 		justify-content: center;
-	}
-	#body .box2 .hover {
+	} */
+	/* #body .box2 .hover {
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.5);
 		opacity: 0;
@@ -59,7 +59,7 @@
 		flex-flow: column;
 		transition: all 0.5s ease-in-out;
 		padding: 2em 2em;
-	}
+	} */
 	#body .box2 .hover h1 {
 		color: #ffffff;
 		font-size: 1.8em;
@@ -69,13 +69,13 @@
 	#body .box2 .hover p {
 		color: #ffffff;
 	}
-	#body .box2:hover {
+	/* #body .box2:hover {
 		filter: grayscale(100%);
 	}
 	#body .box2:hover .hover {
 		opacity: 1;
 		cursor: pointer;
-	}
+	} */
 	#body .box {
 		position: relative;
 		max-height: 255px;
@@ -86,7 +86,7 @@
 		justify-content: center;
 		overflow: hidden;
 	}
-	#body .box .content-hover2 {
+	/* #body .box .content-hover2 {
 		transform: scale(0, 0);
 		position: absolute;
 		height: 100%;
@@ -97,7 +97,7 @@
 		justify-content: center;
 		flex-flow: column;
 		padding: 2em 2em;
-	}
+	} */
 	#body .box .content-hover2 h1 {
 		color: #ffffff;
 		font-size: 1.5em;
@@ -135,18 +135,12 @@
 		justify-content: center;
 		flex-flow: column;
 	}
-	#body .box .content img {
-		width: 160px;
-	}
+	 
 	#body .box .content p {
 		font-size: 1.2em;
 		font-weight: 600;
 		text-transform: uppercase;
 		margin-top: -2em;
 	}
-	#body .box:hover > .content-hover,
-	#body .box:hover > .content-hover2 {
-		transform: scale(1, 1);
-		cursor: pointer;
-	}
+	 
 </style>
