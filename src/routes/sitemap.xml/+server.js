@@ -23,7 +23,7 @@ export async function GET({url}) {
       xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
     >
       <url>
-        <loc>${url.hostname}</loc>
+        <loc>https://${url.hostname}</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
       </url> 
