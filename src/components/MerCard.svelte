@@ -28,7 +28,7 @@
     <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80" src= {cover} alt="media">
 
     <div class="mt-8">
-        <span class="text-blue-500 uppercase">Javascript</span>
+        <span class="text-blue-800 uppercase">Javascript</span>
 
         <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
            {title}

@@ -1,4 +1,4 @@
-import { getPosts } from "$lib/get-posts";
+ 
 import { postCollection } from "$lib/store";
 import { get } from "svelte/store";
 

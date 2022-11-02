@@ -106,14 +106,18 @@
 						<div
 							class="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-3 mt-4 w-full"
 						>
-							{#each doc?.recommended as recommended}
-								<RpCard
-									slug={recommended?.post?._meta?.uid}
-									title={recommended?.post?.title}
-									cover={recommended?.post?.featured_img_link.url}
-									summary={recommended?.post?.post_excerpt}
-								/>
-							{/each}
+							{#await doc.recommended}
+								{console.log('loading')}
+							{:then value}
+								{#each doc?.recommended as recommended}
+									<RpCard
+										slug={recommended?.post?._meta?.uid}
+										title={recommended?.post?.title}
+										cover={recommended?.post?.featured_img_link.url}
+										summary={recommended?.post?.post_excerpt}
+									/>
+								{/each}
+							{/await}
 						</div>
 					</div>
 				{/if}

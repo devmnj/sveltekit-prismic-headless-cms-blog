@@ -8,10 +8,10 @@
             {title}
         </a>
 
-        <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+        <p class="mt-3 text-md text-gray-500 dark:text-gray-300 md:text-sm">
              {@html summary}        </p>
 
-        <p class="mt-3 text-sm text-blue-500">{date}</p>
+        <p class="mt-3 text-md text-bold font-bold text-red-800">{date}</p>
     </div>
 </div>
 
