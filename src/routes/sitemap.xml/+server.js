@@ -1,9 +1,18 @@
 import { getPosts } from "$lib/get-posts";
+import { postCollection } from "$lib/store";
+import { get } from "svelte/store";
 
 // @ts-ignore
 export async function GET({url}) {
-  const posts=await getPosts() ?? [];
-  const postList=posts?.map((/** @type {{ node: { _meta: { uid: any; }; }; }} */ p)=>
+  
+   /**
+   * @type {never[]}
+   */
+   const data = get(postCollection)
+  console.log(data);
+    // const posts=await getPosts() ?? [];
+  
+  const postList=data?.map((/** @type {{ node: { _meta: { uid: any; }; }; }} */ p)=>
   `<url>
   <loc>https://${url.hostname}/posts/${p.node._meta.uid}</loc>
   <changefreq>daily</changefreq>

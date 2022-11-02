@@ -1,8 +1,13 @@
 import  {ALL_POSTS, ALL_POSTS_INCLUDES_STICKY, client} from '$lib/prismicio'
+import { postCollection } from '$lib/store';
+import { get } from 'svelte/store';
  /** @type {import('./$types').PageLoad} */
 export async function load({params}){
-    const data=client.request(ALL_POSTS_INCLUDES_STICKY).then(res=>res.allPost_types.edges) 
-      
+   //  const data=client.request(ALL_POSTS_INCLUDES_STICKY).then(res=>res.allPost_types.edges) 
+   /**
+    * @type {never[]}
+    */
+   const data = get(postCollection)
     const collection = (await data);
  console.log(collection);
     // @ts-ignore
