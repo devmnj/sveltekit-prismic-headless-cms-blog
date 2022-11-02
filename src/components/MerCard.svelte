@@ -40,11 +40,11 @@
 
         <div class="flex items-center justify-between mt-4">
             <div>
-                <a href="/" class="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
+                <!-- <a href="/" class="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
                    Devmnj
-                </a>
+                </a> -->
 
-                <p class="text-sm text-gray-500 dark:text-gray-400">{date}</p>
+                <p class="text-md font-bold text-gray-500 dark:text-gray-800"> {date}</p>
             </div>
 
             
