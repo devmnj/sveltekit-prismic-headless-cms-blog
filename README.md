@@ -29,7 +29,7 @@ The goal of the project is to setup complete blog using `SvelteKit` and the Pris
 
 ## 🚀 Features <a name="features"></a>
 * Dark theme
-* Authors can recommend a list of post
+* Author's can recommend a list of post
 * Search includes
 * Google Analytic integration
 * SEO ready.

@@ -53,7 +53,7 @@ $:{
                 {:then value} 
                     {#each value as document}
                          
-                         <FeaturedCard cover={document?.node?.featured_img_link.url} title={prismicH.asText(document?.node.title)} summary={ asHTML(document?.node?.post_excerpt)} date={prismicH.asDate(document?.node?._meta?.firstPublicationDate)?.toDateString()} slug={document?.node?._meta.uid} />
+                         <FeaturedCard cover={document?.node?.featured_img_link} title={prismicH.asText(document?.node.title)} summary={ asHTML(document?.node?.post_excerpt)} date={prismicH.asDate(document?.node?._meta?.firstPublicationDate)?.toDateString()} slug={document?.node?._meta.uid} />
                     {/each}            
                 {/await}   
      
@@ -82,7 +82,7 @@ $:{
             {:then value} 
                 {#each value as document}
                      
-                     <MerCard cover={document?.node?.featured_img_link.url} title={prismicH.asText(document?.node.title)} summary={ asHTML(document?.node?.post_excerpt)} date={prismicH.asDate(document?.node?._meta?.firstPublicationDate)?.toDateString()} slug={document?.node?._meta.uid} />
+                     <MerCard cover={prismicH.asImageSrc( document?.node?.featured_img_link)} title={prismicH.asText(document?.node.title)} summary={ asHTML(document?.node?.post_excerpt)} date={prismicH.asDate(document?.node?._meta?.firstPublicationDate)?.toDateString()} slug={document?.node?._meta.uid} />
                 {/each}            
             {/await}   
       </div>

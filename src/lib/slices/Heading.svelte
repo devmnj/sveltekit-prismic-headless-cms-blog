@@ -5,4 +5,4 @@
 	
 </script>
 
-<h1 class="text-2xl text-purple-700  mt-1 mb-1">{@html html}</h1>
+<h1 class="text-2xl text-bold text-purple-700  mt-1 mb-1">{@html html}</h1>

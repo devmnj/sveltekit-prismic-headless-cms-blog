@@ -12,6 +12,10 @@
 <style>
 	a:hover {
 		color: orange;
+		font-weight: bold;
+	}
+	a{
+	 font-weight: bold;
 	}
 </style>	
 	{@html html}

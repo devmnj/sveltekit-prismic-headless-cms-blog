@@ -22,7 +22,7 @@ import MainContainer from "components/MainContainer.svelte";
         {:then value} 
             {#each value as document}
                  <!-- {JSON.stringify(document)} -->
-                    <Card slug={document?.node?._meta?.uid} cover={document?.node?.featured_img_link?.url} summary={asHTML( document?.node.post_excerpt)} ></Card>  
+                    <Card slug={document?.node?._meta?.uid} cover={document?.node?.featured_img_link} summary={asHTML( document?.node.post_excerpt)} ></Card>  
             {/each}
             {' '}
         {/await}

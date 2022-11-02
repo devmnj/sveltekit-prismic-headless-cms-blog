@@ -1,5 +1,7 @@
 <div>
-    <img class="relative z-10 object-cover w-full rounded-md h-96" src={cover} alt="">
+    <img class="relative z-10 object-cover w-full rounded-md h-96" src={prismicH.asImageSrc(cover)}
+    srcset={prismicH.asImageWidthSrcSet(cover).srcset} 
+    alt={cover.alt}  >
 
     <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
         <a href={`/posts/${slug}`} class="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl">
@@ -14,6 +16,10 @@
 </div>
 
 <script>
+// @ts-nocheck
+
+    	 
+import * as prismicH from "@prismicio/helpers";
         /**
 	 * @type {any}
 	 */
