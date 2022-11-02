@@ -27,7 +27,7 @@ export async function GET({url}) {
         <loc>${url.hostname}</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
-      </url>
+      </url> 
 
       ${postList}
 
