@@ -61,12 +61,12 @@
 					</h1>
 
 					<div
-						class="flex flex-col items-start justify-between w-full md:flex-row md:items-center dark:text-gray-400"
+						class="flex flex-col items-start justify-between   md:flex-row md:items-center dark:text-gray-400"
 					>
 						<div class="flex items-center md:space-x-2">
 							<img
 								src="https://avatars.githubusercontent.com/u/28762625?v=4/?face&fit=facearea&facepad=2&w=256&h=256&q=80"
-								alt=""
+								alt=" "
 								class="f w-12 h-12 border rounded-md dark:bg-gray-500 dark:border-gray-700"
 							/>
 
