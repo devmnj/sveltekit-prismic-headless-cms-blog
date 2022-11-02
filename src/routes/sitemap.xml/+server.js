@@ -4,13 +4,11 @@ import { getPosts } from "$lib/get-posts";
 export async function GET({url}) {
   const posts=await getPosts() ?? [];
   const postList=posts?.map((/** @type {{ node: { _meta: { uid: any; }; }; }} */ p)=>
-  `
-  <url>
+  `<url>
   <loc>https://${url.hostname}/posts/${p.node._meta.uid}</loc>
   <changefreq>daily</changefreq>
   <priority>0.7</priority>)
   </url>
-
   `); 
   return new Response(
     `<?xml version="1.0" encoding="UTF-8" ?>
@@ -27,9 +25,7 @@ export async function GET({url}) {
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
       </url> 
-
-      ${postList}
-
+   
     </urlset>`.trim(),
     {
       headers: {
