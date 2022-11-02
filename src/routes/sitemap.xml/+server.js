@@ -10,7 +10,7 @@ export async function GET({url}) {
   <priority>0.7</priority>)
   </url>
   `); 
-  return new Response(
+  return new Response( 
     `<?xml version="1.0" encoding="UTF-8" ?>
     <urlset
       xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
@@ -26,7 +26,7 @@ export async function GET({url}) {
         <priority>0.7</priority>
       </url> 
    
-    </urlset>`.trim(),
+    </urlset>`,
     {
       headers: {
         'Content-Type': 'application/xml'
