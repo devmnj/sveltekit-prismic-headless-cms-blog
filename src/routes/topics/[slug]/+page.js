@@ -8,7 +8,7 @@ export async function load({params}){
     * @type {never[]}
     */
    const data = get(postCollection)
-    const collection = (await data);
+    const collection = data;
  console.log(collection);
     // @ts-ignore
     const docs = collection.filter((/** @type {{ node: { _meta: { ui: string; }; }; }} */ m)=>m?.node?.categories?.map((c)=>c?._meta.uid===params.slug))??[];
