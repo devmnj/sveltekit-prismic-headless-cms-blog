@@ -43,7 +43,13 @@
 				{title}
 			</a>
 
-			<p class="mt-3 text-md text-gray-500 dark:text-gray-300 md:text-sm">
+			<p class="mt-3 text-xl text-gray-500 dark:text-gray-300 md:text-sm">
+				<style>
+					p{
+						font-size:18px;
+						color:#0a0a0a;
+					}
+				</style>
 				{@html summary}
 			</p>
 
