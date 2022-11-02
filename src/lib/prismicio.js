@@ -16,7 +16,7 @@ export const CATEGORIES=`query categories{
   }  
   }`
 export const STICKY_POST=`query  {
-    allPost_types(first:2,sortBy: meta_lastPublicationDate_DESC, where: {sticky_post: true}) {
+    allPost_types(first:2,sortBy: meta_lastPublicationDate_ASC, where: {sticky_post: true}) {
       totalCount
       edges {
         node {

@@ -66,7 +66,7 @@
 						<div class="flex items-center md:space-x-2">
 							<img
 								src="https://avatars.githubusercontent.com/u/28762625?v=4/?face&fit=facearea&facepad=2&w=256&h=256&q=80"
-								alt=" "
+								alt="author"
 								class="f w-12 h-12 border rounded-md dark:bg-gray-500 dark:border-gray-700"
 							/>
 
@@ -79,9 +79,9 @@
 						</p>
 					</div>
 				</div>
-				<div class="place-content-center flex">
+				<div class="place-content-center w-200 h-200 flex">
 					<img
-						class="rounded   w-250 h-250"
+						class="rounded-md "
 						src={prismicH.asImageSrc(doc.featured_img_link)}
 						srcset={prismicH.asImageWidthSrcSet(doc.featured_img_link).srcset}
 						alt={doc.featured_img_link.alt}

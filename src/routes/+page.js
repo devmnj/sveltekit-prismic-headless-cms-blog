@@ -1,10 +1,10 @@
-import  {client,ALL_POSTS, STICKY_POST} from '$lib/prismicio'
+import  {client,ALL_POSTS, STICKY_POST, ALL_POSTS_INCLUDES_STICKY} from '$lib/prismicio'
 import { postCollection } from '$lib/store'
 import { error } from '@sveltejs/kit'
 
 /** @type {import('./$types').PageLoad} */
 export async function load(){
-    const documents=client.request(ALL_POSTS).then(res=>res.allPost_types.edges)
+    const documents=client.request(ALL_POSTS_INCLUDES_STICKY).then(res=>res.allPost_types.edges)
     const sticky= client.request(STICKY_POST).then(res=>res.allPost_types.edges)
     postCollection.set(await documents);
     // postCollection.subscribe((coll)=>console.log(coll))

@@ -20,7 +20,8 @@ import Banner from 'components/Banner.svelte';
 <div class="bg-gray-100">
  <!-- <Banner/> -->
 	<Nav />
-	<div  class="dark:bg-gray-900 bg-gary-200 text-white items-center overflow-auto h-screen">
+	<!-- <Nav2/> -->
+	<div  class="dark:bg-gray-900 bg-gary-200 text-white items-center overflow-auto">
 		<main><slot /></main>
 	</div>
 	 <Footer/>

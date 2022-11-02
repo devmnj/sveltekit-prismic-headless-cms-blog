@@ -37,8 +37,8 @@ $:{
 </svelte:head>
 
 <MainContainer>
-    <section class="bg-white dark:bg-gray-900">
-        <div class="container px-6 py-10 mx-auto">
+    <div class="bg-white dark:bg-gray-900">
+        <div class=" px-6 py-10 mx-auto">
             <div class="text-center">
                 <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">Featured Posts</h1>
     
@@ -47,22 +47,20 @@ $:{
                 </p>
             </div>
     
-            <div class="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-2">
+            <div class=" grid grid-cols-1 gap-8 mt-8 lg:grid-cols-2">
                 {#await sticky}
                 <Skeltons/>
                 {:then value} 
-                    {#each value as document}
-                         
+                    {#each value as document}                         
                          <FeaturedCard cover={document?.node?.featured_img_link} title={prismicH.asText(document?.node.title)} summary={ asHTML(document?.node?.post_excerpt)} date={prismicH.asDate(document?.node?._meta?.firstPublicationDate)?.toDateString()} slug={document?.node?._meta.uid} />
                     {/each}            
-                {/await}   
-     
+                {/await}     
                  
             </div>
         </div>
-    </section>
+    </div>
      
-<section class="bg-white dark:bg-gray-900">
+<div class="bg-white dark:bg-gray-900">
     <div class="container px-6 py-10 mx-auto">
         <div class="flex items-center justify-between">
             <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">recent posts </h1>
@@ -75,7 +73,6 @@ $:{
         </div>
 
         <hr class="my-8 border-gray-200 dark:border-gray-700">
-
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-2">
             {#await posts}
             <Skeltons/>
@@ -88,6 +85,6 @@ $:{
       </div>
       </div>
  
-</section>
+    </div>
         </MainContainer>
          

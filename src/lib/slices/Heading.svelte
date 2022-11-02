@@ -6,3 +6,4 @@
 </script>
 
 <h1 class="text-2xl font-bold text-purple-700  mt-1 mb-1">{@html html}</h1>
+	
