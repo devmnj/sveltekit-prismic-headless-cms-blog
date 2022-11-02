@@ -34,5 +34,5 @@
 	 * @type {any}
 	 */
       export let date ;
-    export let categories='';
+ 
 </script>
