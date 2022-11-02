@@ -10,6 +10,12 @@
 
 </script>
 
+<svelte:head>
+    <title>A blog on Web technologies </title>
+    <meta name="description" content="A blog on Web Frame works"/>    
+    
+</svelte:head>
+
 <MainContainer>
     <div class="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> 
         {#await data}

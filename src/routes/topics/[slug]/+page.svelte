@@ -11,6 +11,13 @@ import MainContainer from "components/MainContainer.svelte";
     export let data; 
 </script>
  
+<svelte:head>
+    <title>A blog on Web technologies </title>
+    <meta name="description" content="A blog on Web Frame works"/>    
+    
+</svelte:head>
+
+
 <MainContainer>
 <section class="bg-white dark:bg-gray-900 rounded ">
     <div class="container px-6 py-10 mx-auto">
