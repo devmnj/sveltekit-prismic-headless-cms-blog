@@ -18,9 +18,9 @@ import Banner from 'components/Banner.svelte';
 <Analytics/>	
 
 <div class="bg-gray-100">
- <Banner/>
+ <!-- <Banner/> -->
 	<Nav />
-	<div  class="bg-slate-800 text-white items-center overflow-auto h-screen">
+	<div  class="dark:bg-gray-900 bg-gary-200 text-white items-center overflow-auto h-screen">
 		<main><slot /></main>
 	</div>
 	 <Footer/>

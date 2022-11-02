@@ -1,5 +1,5 @@
  
-<div class="container my-10 mx-auto">
+<div class="container my-10 mx-auto ">
     <!-- Section: Design Block -->
     <section class="">
       <div class="bg-slate-600 alert alert-dismissible fade show fixed top-0 right-0 left-0 z-[1030] w-full py-2 px-6 text-white md:flex justify-between items-center text-center md:text-left">

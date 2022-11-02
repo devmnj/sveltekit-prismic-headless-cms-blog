@@ -2,9 +2,21 @@ import * as prismic from '@prismicio/client'
 import {GraphQLClient} from "graphql-request";
 // Fill in your repository name
 export const repositoryName = 'jsuu'
-
+export const CATEGORIES=`query categories{
+  allPost_categorys{
+    edges{
+      node{
+        name
+        description
+        _meta{
+          uid
+        }
+      }
+    }
+  }  
+  }`
 export const STICKY_POST=`query  {
-    allPost_types(first:1,sortBy: meta_lastPublicationDate_DESC, where: {sticky_post: true}) {
+    allPost_types(first:2,sortBy: meta_lastPublicationDate_DESC, where: {sticky_post: true}) {
       totalCount
       edges {
         node {
@@ -24,6 +36,28 @@ export const STICKY_POST=`query  {
     }
   }`;
 
+  export const ALL_POSTS_INCLUDES_STICKY = `query {
+    allPost_types(sortBy: meta_lastPublicationDate_DESC) {
+    edges {
+    node {
+    _meta {
+    firstPublicationDate
+    id
+    uid
+    }
+    title
+    post_excerpt   
+    featured_img_link {
+    ...on _ExternalLink{
+    url
+    }
+    }
+    }
+    }
+    }
+    }
+    `;
+    
 export const ALL_POSTS = `query {
 allPost_types(sortBy: meta_lastPublicationDate_DESC,where: {sticky_post: false}) {
 edges {

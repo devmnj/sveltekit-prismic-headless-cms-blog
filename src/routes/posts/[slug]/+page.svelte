@@ -59,14 +59,12 @@ $:{
     <!-- {JSON.stringify(document.body)} -->
     <div class="   dark:bg-gray-800 max-w-6xl px-6 py-16 mx-auto space-y-12">
 {#if doc}
-    <article class="  flex-col space-y-8 dark:bg-gray-800 dark:text-gray-50">
+    <article class=" text-black flex-col space-y-8 dark:bg-gray-800 dark:text-gray-50">
         <div class="space-y-6">
             <h1 class="text-4xl font-bold md:tracking-tight md:text-5xl">
                 {doc.title[0].text}
             </h1>
-            <div>
-                <!-- <summary>{document.post_excerpt[0].text}</summary> -->
-            </div>
+        
             <div class="flex flex-col items-start justify-between w-full md:flex-row md:items-center dark:text-gray-400">
                 <div class="flex items-center md:space-x-2">
                     <img
@@ -99,21 +97,15 @@ $:{
         </div>
     </article>
     <div>
-        <div class="flex flex-wrap py-6 space-x-2 border-t border-dashed dark:border-gray-400">
-            <!-- <Tag name={props.post.tag} /> -->
-        </div>
-        <!-- <div class="space-y-2 text-white">
-            <h4 class="text-lg  font-semibold">Comments</h4>
 
-        </div> -->
+                <!-- {JSON.stringify(doc.recommended)}  -->
         {#if doc.recommended}
         <!-- {JSON.stringify(doc?.recommended)} -->
-            <div class="space-y-2 mt-3 text-white">
-            <h4 class="text-lg  font-semibold">Recommended for Reading</h4>
-            <!-- <RelatedPosts tag={props.post.tag} /> -->
+            <div class="space-y-2 mt-3  ">
+            <h4 class="text-lg text-red-500 font-semibold">Recommended for Reading</h4>
             <div class="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-3 mt-4 w-full">
             {#each doc?.recommended as recommended }
-                <!-- {JSON.stringify(recommended)} -->
+       
                 <RpCard slug={recommended?.post?._meta?.uid} title={recommended?.post?.title} cover={recommended?.post?.featured_img_link.url} summary={recommended?.post?.post_excerpt}/>
             {/each}
             </div>
