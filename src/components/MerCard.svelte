@@ -47,7 +47,7 @@
                 <p class="text-sm text-gray-500 dark:text-gray-400">{date}</p>
             </div>
 
-            <a href={`/posts/${slug}`} class="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
+            
         </div>
 
     </div>
