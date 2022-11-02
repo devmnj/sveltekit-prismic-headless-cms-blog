@@ -83,7 +83,7 @@
 					<img
 						class="rounded-md "
 						src={prismicH.asImageSrc(doc.featured_img_link)}
-						srcset={prismicH.asImageWidthSrcSet(doc.featured_img_link).srcset}
+						srcset={prismicH.asImageWidthSrcSet(doc?.featured_img_link)?.srcset}
 						alt={doc.featured_img_link.alt}
 					/>
 				</div>

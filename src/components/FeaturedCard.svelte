@@ -29,7 +29,7 @@
 		<img
 			class=" z-10 object-cover w-full rounded-md h-80"
 			src={prismicH.asImageSrc(cover)}
-			srcset={prismicH.asImageWidthSrcSet(cover).srcset}
+			srcset={prismicH.asImageWidthSrcSet(cover)?.srcset}
 			alt="media"
 		/>
 
