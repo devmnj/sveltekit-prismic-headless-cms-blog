@@ -25,7 +25,7 @@ export async function GET({url}) {
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
       </url> 
-   
+   ${postList}
     </urlset>`,
     {
       headers: {
