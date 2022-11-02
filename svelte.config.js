@@ -9,7 +9,8 @@ const config = {
 		alias: {
 				components:'src/components',
 			 
-				}
+				},
+				 
 	},
 	preprocess: [
 		preprocess({
