@@ -12,6 +12,7 @@ import Banner from 'components/Banner.svelte';
 	<meta name="refresh" content="60"/>
 	<meta name="yandex-verification" content="fcfe7437dbe09115" />
 	<meta name="google-site-verification" content="J9O2DP11PYXL-C38-CLPu2W6BmzoITomcjLUKyZ0m-8" />
+	<meta name="msvalidate.01" content="CEC0A17FDEA4551FECB7D97C702E7E3E" />
 </svelte:head>
 
 <Analytics/>	
