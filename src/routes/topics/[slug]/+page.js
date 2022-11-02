@@ -1,6 +1,4 @@
 import  {ALL_POSTS, ALL_POSTS_INCLUDES_STICKY, client} from '$lib/prismicio'
-import { error } from '@sveltejs/kit'
-import { doc } from 'prettier';
  /** @type {import('./$types').PageLoad} */
 export async function load({params}){
     const data=client.request(ALL_POSTS_INCLUDES_STICKY).then(res=>res.allPost_types.edges) 
