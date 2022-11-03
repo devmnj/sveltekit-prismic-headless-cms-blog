@@ -51,7 +51,7 @@
 	<meta name="yandex-verification" content="fcfe7437dbe09115" />
 </svelte:head>
 <div>
-	<!-- {JSON.stringify(document.body)} -->
+	<!-- <span class ="text-red-500">{JSON.stringify(doc.categories)}</span> -->
 	<div class="   dark:bg-gray-800 max-w-6xl px-6 py-16 mx-auto space-y-12">
 		{#if doc}
 			<article class=" text-black flex-col space-y-8 dark:bg-gray-800 dark:text-gray-50">
@@ -70,11 +70,12 @@
 								class="f w-12 h-12 border rounded-md dark:bg-gray-500 dark:border-gray-700"
 							/>
 
-							<p class="text-sm">
+							<p class="text-md font-bold">
 								Devmnj • {prismicH.asDate(doc._meta.lastPublicationDate).toDateString()}
 							</p>
 						</div>
-						<p class="flex-shrink-0 mt-3 text-sm md:mt-0">
+
+						<p class="flex-shrink-0 mt-3  font-bold text-sm md:mt-0">
 							{rtime} min read
 						</p>
 					</div>
@@ -82,11 +83,23 @@
 				<div class="place-content-center w-200 h-200 flex">
 					<img
 						class="rounded-md "
-						src={prismicH.asImageSrc(doc.featured_img_link)}
+						src={prismicH.asImageSrc(doc?.featured_img_link)}
 						srcset={prismicH.asImageWidthSrcSet(doc?.featured_img_link)?.srcset}
-						alt={doc.featured_img_link.alt}
+						alt={doc?.featured_img_link?.alt}
 					/>
 				</div>
+				{#if doc?.categories}
+					<div class=" text-lg text-green-800">
+						Posted Under :
+						{#each doc?.categories as cat}
+							<span class="m-1  text-rose- uppercase"
+								><a href={`/topics/${prismicH.asText(cat?.category?.name)}`}
+									>{prismicH.asText(cat?.category?.name)}</a
+								>
+							</span>
+						{/each}
+					</div>
+				{/if}
 				<div class="dark:text-gray-100" id="article">
 					<SliceZone
 						slices={doc.body}
@@ -96,28 +109,37 @@
 						}}
 					/>
 				</div>
+				{#if doc?._meta?.tags && doc?._meta?.tags.length > 0}
+					<div class="text-green-800 text-lg font-bold"
+						>Tags :
+						{#each doc?._meta?.tags as tag}
+							<span class="m-1 font-bold text-pink-500 uppercase">{tag}</span>
+						{/each}
+			</div>
+				{/if}
 			</article>
+
 			<div>
-				<!-- {JSON.stringify(doc.recommended)}  -->
-				{#if doc.recommended}
+				<!-- <span class="text-red-800">	{JSON.stringify(doc.recommended)} </span> -->
+				{#if doc.recommended?.length > 0}
 					<!-- {JSON.stringify(doc?.recommended)} -->
 					<div class="space-y-2 mt-3  ">
 						<h4 class="text-lg text-red-500 font-semibold">Recommended for Reading</h4>
 						<div
 							class="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-3 mt-4 w-full"
 						>
-							{#await doc.recommended}
-								{console.log('loading')}
-							{:then value}
-								{#each doc?.recommended as recommended}
+							<!-- <span class="text-red-800">
+								{JSON.stringify(doc?.recommended)}</span>  -->
+							{#each doc?.recommended as recommended}
+								{#if recommended?.post}
 									<RpCard
 										slug={recommended?.post?._meta?.uid}
 										title={recommended?.post?.title}
 										cover={recommended?.post?.featured_img_link.url}
 										summary={recommended?.post?.post_excerpt}
 									/>
-								{/each}
-							{/await}
+								{/if}
+							{/each}
 						</div>
 					</div>
 				{/if}

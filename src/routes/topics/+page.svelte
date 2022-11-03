@@ -1,6 +1,8 @@
 <script>
+	import { goto } from "$app/navigation";
+	import { search } from "$lib/store";
 // @ts-nocheck
-
+     
 	import { asHTML, asText } from "@prismicio/helpers";
 	import HBox from "components/HBox.svelte";
 	import MainContainer from "components/MainContainer.svelte";
@@ -8,6 +10,11 @@
     /** @type {import('./$types').PageData} */
     export let data;
 
+    $: {
+		if ($search) {
+			goto('/');
+		}
+	}
 </script>
 
 <svelte:head>

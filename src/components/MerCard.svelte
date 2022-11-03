@@ -1,4 +1,7 @@
 <script>
+// @ts-nocheck
+
+    import * as prismicH from '@prismicio/helpers'
     /**
 	 * @type {any}
 	 */
@@ -19,6 +22,10 @@
 	 * @type {any}
 	 */
       export let date ;
+      /**
+	 * @type {never[]}
+	 */
+       export let categories=[]
      
 
 
@@ -28,7 +35,14 @@
     <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80" src= {cover} alt="media">
 
     <div class="mt-8">
-        <span class="text-blue-800 uppercase">Javascript</span>
+        <!-- {#if  categories}
+        {#each categories as cat}
+            <span class="text-blue-800 uppercase text-left font-bold"><a href={`/topics/${prismicH.asText(cat?.category?.name)}`}>{prismicH.asText(cat?.category?.name)}</a></span>
+        {/each} 
+        {/if} -->
+
+
+        <!-- <span class="text-blue-800 uppercase">Javascript</span> -->
 
         <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
            {title}

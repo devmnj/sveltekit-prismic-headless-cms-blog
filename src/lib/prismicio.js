@@ -46,6 +46,17 @@ export const STICKY_POST=`query  {
     uid
     }
     title
+    categories
+    {
+      ... on Post_typeCategories{
+        category{
+          ... on Post_category{
+            name
+            description
+          }
+        }
+      }
+    }
     post_excerpt   
     featured_img_link {
     ...on _ExternalLink{

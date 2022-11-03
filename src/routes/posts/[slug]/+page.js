@@ -8,7 +8,19 @@ export async function load({ params,routeId}) {
     const POST_QUERY = `query {
         post_type(uid: "${params.slug}", lang: "en-us") {
           _meta{
-            lastPublicationDate
+            lastPublicationDate,
+            tags
+          }
+          categories
+          {
+            ... on Post_typeCategories{
+              category{
+                ... on Post_category{
+                  name
+                  description
+                }
+              }
+            }
           }
           recommended{
             post{
